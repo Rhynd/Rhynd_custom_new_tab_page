@@ -393,3 +393,33 @@ body {
 .search-container.has-suggestions #matches-list {
     display: block; /* Shown when the class is present */
 }
+
+/* --- Background Settings Button --- */
+.bg-settings-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color: var(--surface-color);
+    border: 3px solid var(--secondary-accent);
+    border-radius: 18px;
+    cursor: pointer;
+    opacity: 0; /* Invisible by default */
+    transition: opacity 0.3s ease, border-color 0.2s;
+    z-index: 100;
+}
+
+.bg-settings-btn:hover {
+    opacity: 1; /* Visible on hover */
+    border-color: var(--primary-accent);
+}
+
+.bg-settings-btn svg {
+    width: 24px;
+    height: 24px;
+    fill: var(--text-color-light);
+}
