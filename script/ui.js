@@ -22,11 +22,14 @@ export function displayTopSites() {
                 linkItem.className = 'link-item';
                 linkItem.title = site.title;
 
-                const faviconUrl = `chrome-extension://${chrome.runtime.id}/_favicon/?pageUrl=${encodeURIComponent(site.url)}&size=32`;
+                const faviconUrl = chrome.runtime.getURL(`_favicon/?pageUrl=${encodeURIComponent(site.url)}&size=32`);
 
                 const linkIcon = document.createElement('div');
                 linkIcon.className = 'link-icon';
-                linkIcon.innerHTML = `<img src="${faviconUrl}" alt="Favicon for ${site.title}">`;
+                const img = document.createElement('img');
+                img.src = faviconUrl;
+                img.alt = `Favicon for ${site.title || site.url}`;
+                linkIcon.appendChild(img);
 
                 const linkTitle = document.createElement('span');
                 linkTitle.textContent = site.title || new URL(site.url).hostname;
@@ -132,7 +135,7 @@ export function createSuggestionItem(suggestion) {
 
     let iconHtml;
     if (suggestion.type === 'history' && suggestion.url) {
-        iconHtml = `<img class="favicon" src="chrome-extension://${chrome.runtime.id}/_favicon/?pageUrl=${encodeURIComponent(suggestion.url)}&size=32" alt="">`;
+        iconHtml = `<img class="favicon" src="${chrome.runtime.getURL(`_favicon/?pageUrl=${encodeURIComponent(suggestion.url)}&size=32`)}" alt="">`;
     } else if (suggestion.type === 'bookmark') {
         iconHtml = bookmarkIconTemplate.outerHTML;
     } else {
