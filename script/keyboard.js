@@ -16,15 +16,13 @@ export function handleSearchInputKeyDown(event) {
             break;
 
         case 'Enter':
-        case ' ':
-            if (!elements.searchContainer.classList.contains('has-suggestions')) {
-                event.preventDefault();
-                const query = elements.searchInput.value.trim();
-                query ? fetchSuggestions(query) : showInitialSuggestions();
-            } else if (event.key === 'Enter' && selectedItem?.suggestionData) {
+            if (selectedItem?.suggestionData) {
                 event.preventDefault();
                 const openInNewTab = event.shiftKey;
                 performSearch(selectedItem.suggestionData.url || selectedItem.suggestionData.text, openInNewTab);
+            } else if (!elements.searchInput.value.trim()) {
+                event.preventDefault();
+                showInitialSuggestions();
             }
             break;
 

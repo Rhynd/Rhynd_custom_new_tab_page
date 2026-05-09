@@ -58,13 +58,15 @@ export function initBackgroundManager() {
                     chrome.storage.local.set({ customBackground: dataUrl }, () => {
                         if (chrome.runtime.lastError) {
                             console.error("Error saving background:", chrome.runtime.lastError);
-                            alert("Image might be too large to save! Please select a smaller file.");
                         }
                     });
                 }
             };
             // Read image as Data URL
             reader.readAsDataURL(file);
+
+            // Reset the input value so the same file can be selected again if needed
+            event.target.value = '';
         }
     });
 }
