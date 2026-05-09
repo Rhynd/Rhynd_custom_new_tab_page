@@ -17,6 +17,7 @@ This is a browser extension that overrides the default new tab page with a custo
 *   **History Management**: You can remove a specific page or an entire group of pages from your browser history directly from the suggestions list.
 *   **Full Keyboard Accessibility**: Navigate and control the entire new tab page using only your keyboard.
 *   **Modern & Responsive Design**: A clean, dark theme that is easy on the eyes, with a layout that works well on different screen sizes.
+*   **Custom Background**: Hover over the bottom-right corner to reveal a hidden settings button. Click it to upload your own custom background image, or right-click it to instantly reset to the default Star Citizen wallpaper.
 
 ## Keyboard Shortcuts
 
