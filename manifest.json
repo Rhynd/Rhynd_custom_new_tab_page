@@ -12,8 +12,7 @@
     "bookmarks",
     "declarativeNetRequest",
     "storage",
-    "unlimitedStorage",
-    "favicon"
+    "unlimitedStorage"
   ],
   "host_permissions": [
     "https://www.google.com/*",
