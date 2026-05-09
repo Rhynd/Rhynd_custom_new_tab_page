@@ -1,6 +1,6 @@
 # Privacy Policy for Rhynd's Custom New Tab Page
 
-**Last Updated:** `27/10/2025`
+**Last Updated:** `09/05/2026`
 
 Thank you for using Rhynd's Custom New Tab Page. This privacy policy explains what information the extension accesses and how it is used. Your privacy is important to us, and this extension is designed to be as transparent as possible.
 
@@ -28,6 +28,10 @@ To provide its features, the extension needs permission to access certain data s
     *   **Why?** To ensure that search suggestions from Google are fetched correctly and securely.
     *   **Usage:** The extension uses this permission to apply a rule that modifies the Google suggestion service URL. This is a secure method that does not involve reading or intercepting the content of your network traffic.
 
+5.  **Local Storage (`storage` and `unlimitedStorage` permissions)**:
+    *   **Why?** To allow you to upload and save a custom background image for your new tab page.
+    *   **Usage:** The image you upload is converted and saved entirely locally within your browser's extension storage. This data never leaves your device and is not sent to any external server.
+
 
 ## Information Transmitted to Third Parties
 
@@ -38,17 +42,12 @@ Certain features require sending data to external services. This is limited to w
     *   **Where is it sent?** To Google's suggestion service (`suggestqueries.google.com`).
     *   **Why?** To fetch real-time search suggestions, similar to how Chrome's omnibox works.
 
-2.  **Favicons (Website Icons)**:
-    *   **What is sent?** The URLs of your most visited sites and history suggestions.
-    *   **Where is it sent?** To Google's favicon service (`t2.gstatic.com`).
-    *   **Why?** To fetch and display the correct icon for each website in your Quick Links and history suggestions.
-
-3.  **Search Execution**:
+2.  **Search Execution**:
     *   **What is sent?** Your search query.
     *   **Where is it sent?** To Google Search (`google.com`).
     *   **Why?** To perform a search when you submit the search form.
 
-4.  **Opening Google Gemini**:
+3.  **Opening Google Gemini**:
     *   **What is sent?** No data is sent automatically. Clicking the Gemini icon opens the Google Gemini website in a new tab.
     *   **Where is it sent?** To Google Gemini (`gemini.google.com`).
     *   **Why?** To provide a convenient shortcut to Google's AI chat service.
