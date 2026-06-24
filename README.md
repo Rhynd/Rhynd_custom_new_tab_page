@@ -2,7 +2,7 @@
 
 This is a browser extension that overrides the default new tab page with a custom, feature-rich start page. It is designed with a dark, clean aesthetic inspired by Chrome's "Citron" theme and features a background from the game Star Citizen.
 
-![Screenshot of the New Tab Page](src/NewTab.png)
+![Screenshot of the New Tab Page](src/NewTab.jpg)
 
 ## Features
 
